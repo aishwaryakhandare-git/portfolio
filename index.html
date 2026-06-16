@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Aishwarya Khandare | Portfolio</title>
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -133,104 +133,9 @@
         section {
             scroll-margin-top: 80px;
         }
-
-        #tsparticles{
-        position:fixed;
-        inset:0;
-        z-index:-10;
-        }
-
-        .hero-glow{
-
-        position:absolute;
-
-        width:900px;
-
-        height:900px;
-
-        left:50%;
-
-        top:50%;
-
-        transform:translate(-50%,-50%);
-
-        background:
-        radial-gradient(
-        circle,
-        rgba(0,221,221,.18),
-        transparent 70%
-        );
-
-        filter:blur(60px);
-
-        pointer-events:none;
-
-        }
-
-        #home{
-
-        position:relative;
-
-        text-align:center;
-
-        overflow:hidden;
-
-        }
-
-        #home h1{
-
-        font-size:96px !important;
-
-        }
-
-        #home p{
-
-        margin-left:auto;
-
-        margin-right:auto;
-
-        }
-
-        .hero-buttons{
-
-        display:flex;
-
-        justify-content:center;
-
-        gap:20px;
-
-        margin-top:60px;
-
-        flex-wrap:wrap;
-
-        }
-
-        .hero-btn{
-
-        padding:18px 40px;
-
-        border-radius:18px;
-
-        transition:.3s;
-
-        }
-
-        .hero-btn:hover{
-
-        transform:translateY(-3px);
-
-        }
-
-        .clean-card{
-
-        backdrop-filter:blur(12px);
-
-        }
     </style>
 </head>
 <body class="antialiased selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
-<div id="tsparticles"></div>
-<div class="hero-glow"></div>
 <!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-surface-container">
 
@@ -257,7 +162,7 @@
 
 <div>
 <span class="text-[18px] text-primary-fixed-dim mb-4 tracking-widest inline-block">BSc.IT 2026</span>
-<h1 class="font-h1 text-[88px] md:text-[110px]" text-on-surface mb-4 leading-tight">
+<h1 class="font-h1 text-[72px] text-on-surface mb-4 leading-tight">
   Aishwarya <span class="text-primary-fixed-dim text-glow">Khandare</span>
 </h1>
 <p class="font-h3 text-[28px] text-on-surface-variant mb-6 max-w-3xl">
@@ -265,31 +170,22 @@ Web Developer building practical and scalable applications.
 </p>
 
 <p class="text-lg text-on-surface-variant max-w-2xl leading-relaxed">
-I develop responsive and user-friendly web applications using Python, Flask, React.js, and MySQL. 
+I develop responsive and user-friendly web applications using Python, Flask, PHP, and MySQL. 
 I enjoy solving real-world problems and building efficient systems through hands-on projects. 
 Currently open to opportunities in web and software development.
 </p>
 
-<div class="hero-buttons">
+<a href="#footer"
+   class="inline-flex items-center gap-2 mt-12 px-8 py-3 bg-primary-fixed-dim text-black 
+   font-semibold rounded-full hover:scale-105 transition-all 
+   shadow-[0_0_15px_rgba(0,221,221,0.3)]">
 
-<a
-href="resume.pdf"
-class="hero-btn bg-primary-fixed-dim text-black font-semibold">
-
-View Resume
-
-</a>
-
-<a
-href="#footer"
-class="hero-btn border border-primary-fixed-dim text-primary-fixed-dim">
-
-Get In Touch
+  Contact Me
+  <span class="material-symbols-outlined">arrow_forward</span>
 
 </a>
 
 </div>
-
 </div>
 </section>
 <!-- About & Skills Combined -->
@@ -298,7 +194,7 @@ Get In Touch
 <div class="md:w-1/2">
 <h2 class="font-h2 text-h2 text-on-surface mb-6">About</h2>
 <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
-                I build AI-based applications using Python, Flask, and React.js. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces, creating functional and technically rigorous software.
+                I build AI-based applications using Python, Flask, and PHP. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces, creating functional and technically rigorous software.
             </p>
 <div class="flex flex-wrap gap-3">
 <div class="px-4 py-2 clean-card rounded-lg flex items-center gap-2">
@@ -317,7 +213,7 @@ Get In Touch
 <p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Python</p>
 </div>
 <div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">React.js</p>
+<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">PHP</p>
 </div>
 <div class="p-4 clean-card rounded-xl flex items-center justify-center">
 <p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">MySQL</p>
@@ -366,11 +262,6 @@ Get In Touch
       <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">HTML</span>
       <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">CSS</span>
       <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">JS</span>
-      <div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">
-TypeScript
-</p>
-</div>
     </div>
 
     <!-- Info Boxes -->
@@ -474,7 +365,7 @@ TypeScript
     </p>
 
     <div class="flex gap-2 mb-3">
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">React.js</span>
+      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">PHP</span>
       <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">MYSQL</span>
     </div>
 
@@ -545,62 +436,4 @@ TypeScript
 style="position:fixed; bottom:20px; right:20px; padding:10px;">
 ⬆
 </button>
-
-<script>
-
-tsParticles.load("tsparticles",{
-
-background:{
-color:"#000"
-},
-
-particles:{
-
-number:{
-value:50
-},
-
-color:{
-value:"#8ffff5"
-},
-
-links:{
-
-enable:true,
-
-distance:160,
-
-opacity:.18,
-
-color:"#00d9ff"
-
-},
-
-move:{
-
-enable:true,
-
-speed:1
-
-},
-
-opacity:{
-
-value:.5
-
-},
-
-size:{
-
-value:2
-
-}
-
-}
-
-})
-
-</script>
-
-</body>
-</html>
+</body></html>
