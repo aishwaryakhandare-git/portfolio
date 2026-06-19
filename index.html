@@ -134,7 +134,7 @@
             scroll-margin-top: 80px;
         }
     </style>
-</head>
+<style id="hero-redesign">.hero-bg{background:#121517;background-image:radial-gradient(circle at center,rgba(45,85,80,.35) 0%,rgba(18,21,23,1) 70%);position:relative;overflow:hidden}#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}.hero-title-new{text-shadow:0 0 30px rgba(187,247,208,.15)}</style></head>
 <body class="antialiased selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
 <!-- TopAppBar -->
 <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-sm border-b border-surface-container">
@@ -159,10 +159,11 @@
 <main class="max-w-[1100px] mx-auto px-8">
 <!-- Hero Section -->
 <section class="min-h-[100vh] flex flex-col justify-center py-xl" id="home">
+<canvas id="particle-canvas"></canvas>
 
-<div>
+<div class="hero-content">
 <span class="text-[18px] text-primary-fixed-dim mb-4 tracking-widest inline-block">BSc.IT 2026</span>
-<h1 class="font-h1 text-[72px] text-on-surface mb-4 leading-tight">
+<h1 class="font-h1 text-[64px] md:text-[110px] hero-title-new text-on-surface mb-4 leading-tight">
   Aishwarya <span class="text-primary-fixed-dim text-glow">Khandare</span>
 </h1>
 <p class="font-h3 text-[28px] text-on-surface-variant mb-6 max-w-3xl">
@@ -436,4 +437,179 @@ Currently open to opportunities in web and software development.
 style="position:fixed; bottom:20px; right:20px; padding:10px;">
 ⬆
 </button>
-</body></html>
+<script>
+
+const canvas=
+document.getElementById(
+"particle-canvas"
+)
+
+const ctx=
+canvas.getContext("2d")
+
+canvas.width=
+window.innerWidth
+
+canvas.height=
+window.innerHeight
+
+let dots=[]
+
+for(
+let i=0;
+i<35;
+i++
+){
+
+dots.push({
+
+x:
+Math.random()*canvas.width,
+
+y:
+Math.random()*canvas.height,
+
+dx:
+(Math.random()-.5)*.3,
+
+dy:
+(Math.random()-.5)*.3
+
+})
+
+}
+
+let mouse={
+x:null,
+y:null
+}
+
+window.addEventListener(
+"mousemove",
+
+e=>{
+
+mouse.x=e.clientX
+
+mouse.y=e.clientY
+
+}
+
+)
+
+function draw(){
+
+ctx.clearRect(
+0,
+0,
+canvas.width,
+canvas.height
+)
+
+dots.forEach(
+a=>{
+
+a.x+=a.dx
+
+a.y+=a.dy
+
+ctx.fillStyle=
+"white"
+
+ctx.beginPath()
+
+ctx.arc(
+a.x,
+a.y,
+2,
+0,
+6.2
+)
+
+ctx.fill()
+
+let count=0
+
+dots.forEach(
+b=>{
+
+if(count>2)
+return
+
+let d=
+Math.hypot(
+a.x-b.x,
+a.y-b.y
+)
+
+if(d<90){
+
+ctx.strokeStyle=
+"rgba(187,247,208,.12)"
+
+ctx.beginPath()
+
+ctx.moveTo(
+a.x,
+a.y
+)
+
+ctx.lineTo(
+b.x,
+b.y
+)
+
+ctx.stroke()
+
+count++
+
+}
+
+}
+
+)
+
+if(mouse.x){
+
+let md=
+Math.hypot(
+a.x-mouse.x,
+a.y-mouse.y
+)
+
+if(md<120){
+
+ctx.strokeStyle=
+"rgba(187,247,208,.3)"
+
+ctx.beginPath()
+
+ctx.moveTo(
+a.x,
+a.y
+)
+
+ctx.lineTo(
+mouse.x,
+mouse.y
+)
+
+ctx.stroke()
+
+}
+
+}
+
+}
+
+)
+
+requestAnimationFrame(
+draw
+)
+
+}
+
+draw()
+
+</script></body></html>
