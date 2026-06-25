@@ -127,6 +127,72 @@
         .text-glow {
             text-shadow: 0 0 15px rgba(0, 221, 221, 0.4);
         }
+        .wave-grid{
+
+background:
+
+radial-gradient(
+circle,
+rgba(0,221,221,.85)
+1px,
+
+transparent 1px
+);
+
+background-size:
+
+18px 18px;
+
+transform:
+
+perspective(700px)
+
+rotateX(75deg);
+
+animation:
+
+waveMove 8s linear infinite;
+
+opacity:.55;
+
+filter:
+
+drop-shadow(
+0 0 12px
+rgba(0,221,221,.35)
+);
+
+}
+
+
+
+@keyframes waveMove{
+
+0%{
+
+transform:
+
+perspective(700px)
+
+rotateX(75deg)
+
+translateY(0);
+
+}
+
+100%{
+
+transform:
+
+perspective(700px)
+
+rotateX(75deg)
+
+translateY(18px);
+
+}
+
+}
         .border-glow {
             box-shadow: 0 0 15px rgba(0, 221, 221, 0.2);
         }
@@ -172,127 +238,178 @@ z-10
 w-full
 ">
 
-<!-- HERO -->
+<!-- Hero Section -->
 
 <section
 id="home"
 class="
-relative
 min-h-screen
+relative
 overflow-hidden
-flex
-items-center
-justify-center
-px-6
+px-10
 ">
 
-<!-- Background -->
+<canvas id="particle-canvas"></canvas>
 
 <div
 class="
 absolute
-inset-0
-bg-[radial-gradient(circle_at_top,rgba(0,255,255,.12),transparent_50%)]
+bottom-0
+left-0
+w-full
+h-[220px]
+opacity-70
+pointer-events-none
+">
+
+<div
+class="
+absolute
+bottom-[-120px]
+left-[-10%]
+w-[120%]
+h-[300px]
+
+bg-[radial-gradient(circle_at_center,rgba(0,221,221,.28),transparent_60%)]
+
+blur-[70px]
 ">
 </div>
 
-<canvas
-id="particle-canvas"
-class="
-absolute
-inset-0
-">
-</canvas>
-
-
-<!-- CONTENT -->
+</div>
 
 <div
 class="
+max-w-[1500px]
+mx-auto
+min-h-screen
+grid
+grid-cols-1
+lg:grid-cols-[180px_1fr]
+items-center
 relative
 z-10
-max-w-6xl
-mx-auto
-text-center
 ">
 
-<p
+<!-- LEFT -->
+
+<div
 class="
-uppercase
-tracking-[0.35em]
-text-primary-fixed-dim
-text-sm
-mb-8
+hidden
+lg:flex
+flex-col
+justify-center
+text-left
+border-r
+border-white/10
+h-full
 ">
 
-PORTFOLIO · WEB DEVELOPER
+<div class="text-primary-fixed-dim text-[42px] mb-16">
+
+>
+
+_
+
+</div>
+
+<p class="text-white/40 leading-8">
+
+// Welcome to<br>
+my portfolio
 
 </p>
 
+</div>
+
+
+<!-- RIGHT -->
+
+<div
+class="
+flex
+flex-col
+justify-center
+pl-0
+lg:pl-20 lg:-translate-y-10
+">
 
 <h1
 class="
-hero-title
-text-[82px]
-md:text-[150px]
-font-black
-leading-[0.88]
-tracking-[-0.08em]
+font-h1
+leading-[0.85]
+mb-10
+">
+
+<div
+class="
+text-[72px]
+md:text-[118px]
+font-bold
 text-white
-"
->
+">
 
 Aishwarya
 
-<br>
+</div>
 
-<span
+<div
 class="
+text-[72px]
+md:text-[118px]
+font-bold
 text-primary-fixed-dim
 text-glow
 ">
 
 Khandare
 
-</span>
+</div>
 
 </h1>
 
 
+<div
+class="
+mb-10
+">
 
 <div
 class="
-mt-10
-h-[60px]
 flex
-justify-center
 items-center
-"
->
-
-<p
-class="
-text-[24px]
-md:text-[32px]
-text-on-surface-variant
-font-medium
-"
->
-
-<span id="typed"></span>
+gap-4
+flex-wrap
+text-[18px]
+">
 
 <span
 class="
 text-primary-fixed-dim
-animate-pulse
-"
->
+font-semibold
+">
 
-|
+Web Developer
 
 </span>
 
-</p>
+<span class="text-white/40">|</span>
+
+<span class="text-white/60">
+
+Problem Solver
+
+</span>
+
+<span class="text-white/40">|</span>
+
+<span class="text-white/60">
+
+Tech Enthusiast
+
+</span>
+
+</div>
 
 </div>
 
@@ -300,221 +417,97 @@ animate-pulse
 
 <p
 class="
-mt-8
-max-w-3xl
-mx-auto
-text-lg
-leading-[2]
-text-on-surface-variant
-"
->
+text-white/60
+text-[22px]
+leading-relaxed
+max-w-[700px]
+mb-14
+">
 
-Building practical digital experiences through
-clean interfaces,
-full stack systems,
-and scalable applications.
+&gt; I build practical and scalable web applications that solve real-world problems.
 
 </p>
 
 
-
 <div
 class="
-mt-14
 flex
-justify-center
 gap-6
 flex-wrap
 ">
 
 <a
-
 href="resume.pdf"
 
 class="
-glow-button
 px-10
 py-5
-rounded-2xl
-font-bold
-"
+bg-primary-fixed-dim
+text-black
+rounded-xl
+font-semibold
+shadow-[0_0_40px_rgba(0,221,221,.3)]
+">
 
->
-
-View Resume
+View Resume ↗
 
 </a>
 
 
-
 <a
-
 href="#footer"
 
 class="
-outline-button
 px-10
 py-5
-rounded-2xl
-font-semibold
-"
+border
+border-primary-fixed-dim
+text-primary-fixed-dim
+rounded-xl
+hover:bg-primary-fixed-dim/10
+">
 
->
-
-Get In Touch
+Get In Touch ✈
 
 </a>
 
 </div>
 
+</div>
 
+</div>
+
+<!-- Digital Wave -->
 
 <div
 class="
-mt-24
-flex
-justify-center
-gap-8
-text-sm
-text-on-surface-variant
-flex-wrap
-"
->
+absolute
+bottom-0
+left-0
+w-full
+h-[420px]
+overflow-hidden
+pointer-events-none
+z-[2]
+">
 
-<span>React.js</span>
-
-<span>•</span>
-
-<span>JavaScript</span>
-
-<span>•</span>
-
-<span>Python</span>
-
-<span>•</span>
-
-<span>Firebase</span>
-
-<span>•</span>
-
-<span>MySQL</span>
-
+<div
+class="
+wave-grid
+absolute
+bottom-[-120px]
+left-[-5%]
+w-[110%]
+h-[500px]
+">
 </div>
 
 </div>
 
 </section>
 
-
-
-<script>
-
-const words=[
-
-"Web Developer",
-
-"Full Stack Developer",
-
-"Building scalable applications",
-
-"Creating modern experiences"
-
-]
-
-let word=0
-let char=0
-let deleting=false
-
-function type(){
-
-const el=
-document.getElementById(
-"typed"
-)
-
-const current=
-words[word]
-
-el.textContent=
-
-deleting
-?
-
-current.slice(
-0,
-char--
-)
-
-:
-
-current.slice(
-0,
-char++
-)
-
-if(
-
-!deleting
-&&
-char>
-current.length
-
-){
-
-deleting=true
-
-setTimeout(
-type,
-1300
-)
-
-return
-
-}
-
-if(
-
-deleting
-&&
-char<0
-
-){
-
-deleting=false
-
-word=
-
-(
-word+1
-)
-
-%
-words.length
-
-}
-
-setTimeout(
-
-type,
-
-deleting
-
-?
-
-40
-
-:
-
-80
-
-)
-
-}
-
-type()
-
-</script>
 <!-- About & Skills Combined -->
+
 <section
 class="
 py-xl
@@ -529,9 +522,42 @@ mx-auto
 px-14
 "
 id="about">
-<div class="flex flex-col md:flex-row gap-16">
-<div class="md:w-1/2">
-<h2 class="font-h2 text-h2 text-on-surface mb-6">About</h2>
+<div
+class="
+grid
+grid-cols-1
+lg:grid-cols-[1.2fr_.8fr]
+gap-12
+items-start
+">
+<div
+class="
+clean-card
+rounded-[32px]
+p-10
+relative
+overflow-hidden
+">
+
+<h2
+class="
+font-h2
+text-[64px]
+text-white
+mb-8
+">About</h2>
+<p
+class="
+text-primary-fixed-dim
+tracking-[.3em]
+uppercase
+text-[12px]
+mb-6
+">
+
+// About
+
+</p>
 <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
                 I build AI-based applications using Python, Flask, and React.js. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces, creating functional and technically rigorous software.
             </p>
@@ -546,9 +572,35 @@ id="about">
 </div>
 </div>
 </div>
-<div class="md:w-1/2" id="skills">
-<h2 class="font-h2 text-h2 text-on-surface mb-6">Skills</h2>
-<div class="grid grid-cols-2 gap-4"><div class="p-4 clean-card rounded-xl flex items-center justify-center">
+<div
+id="skills"
+
+class="
+clean-card
+rounded-[32px]
+p-10
+">
+
+<h2
+class="
+font-h2
+text-[48px]
+text-white
+mb-8
+">Skills</h2>
+<p
+class="
+text-primary-fixed-dim
+tracking-[.3em]
+uppercase
+text-[12px]
+mb-8
+">
+
+// Skills
+
+</p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-5"><div class="p-4 clean-card rounded-xl flex items-center justify-center">
 <p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Python</p>
 </div>
 <div class="p-4 clean-card rounded-xl flex items-center justify-center">
@@ -595,14 +647,46 @@ id="projects">
             
 </a>
 </div>
-<div class="flex flex-col gap-6">
+<div
+
+class="
+
+grid
+
+grid-cols-1
+
+xl:grid-cols-2
+
+gap-8
+
+items-start
+
+">
 
   <!-- SmartMark -->
-  <div class="group clean-card rounded-xl p-6 transition-all duration-300">
+  <div class="group
 
-    <h3 class="font-h3 text-xl text-on-surface mb-2">SmartMark</h3>
+clean-card
 
-    <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
+rounded-[32px]
+
+p-8
+
+transition-all
+
+duration-500
+
+hover:-translate-y-2
+
+hover:border-primary-fixed-dim/50
+
+relative
+
+overflow-hidden">
+
+    <h3 class="font-h2 text-[38px] text-white text-on-surface mb-2">SmartMark</h3>
+
+    <p class="text-[17px] leading-8 text-white/60 mb-3 leading-relaxed">
       SmartMark is a full-stack face recognition-based attendance system designed to automate and improve traditional attendance processes. 
       It uses real-time facial detection to accurately mark attendance, reducing manual errors and preventing proxy attendance.
 
@@ -622,24 +706,24 @@ id="projects">
     </div>
 
     <!-- Info Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 mb-3">
+    <div class="grid grid-cols-2 gap-4 -4 mb-3">
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Features</p>
         <p class="text-sm">Real-time face detection, automated attendance, secure verification</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Modules</p>
         <p class="text-sm">Admin, Teacher, Student role-based system</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Tech Stack</p>
         <p class="text-sm">Python, Flask, OpenCV, Firebase, HTML/CSS</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Highlights</p>
         <p class="text-sm">Reduced manual errors, scalable system, real-time sync</p>
       </div>
@@ -656,13 +740,31 @@ id="projects">
 
   <!-- AirCare AI -->
 
-  <div class="group clean-card rounded-xl p-6 transition-all duration-300">
+  <div class="group
 
-  <h3 class="font-h3 text-xl text-on-surface mb-2">
+clean-card
+
+rounded-[32px]
+
+p-8
+
+transition-all
+
+duration-500
+
+hover:-translate-y-2
+
+hover:border-primary-fixed-dim/50
+
+relative
+
+overflow-hidden">
+
+  <h3 class="font-h2 text-[38px] text-white text-on-surface mb-2">
   AirCare AI 🌿
   </h3>
 
-  <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
+  <p class="text-[17px] leading-8 text-white/60 mb-3 leading-relaxed">
 
   AirCare AI is a modern full-stack air quality monitoring platform designed to provide real-time AQI insights, environmental analytics, and personalized health recommendations through an interactive dashboard experience.
 
@@ -705,10 +807,10 @@ id="projects">
 
   <!-- Info Cards -->
 
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 mb-3">
+  <div class="grid grid-cols-2 gap-4 mt-4 mb-3">
 
 
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
 
   <p class="text-xs text-primary-fixed-dim mb-1">
 
@@ -726,7 +828,7 @@ id="projects">
 
 
 
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
 
   <p class="text-xs text-primary-fixed-dim mb-1">
 
@@ -744,7 +846,7 @@ id="projects">
 
 
 
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
 
   <p class="text-xs text-primary-fixed-dim mb-1">
 
@@ -762,7 +864,7 @@ id="projects">
 
 
 
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
 
   <p class="text-xs text-primary-fixed-dim mb-1">
 
@@ -793,11 +895,29 @@ id="projects">
   </div>
 
   <!-- CollabBoard -->
-  <div class="group clean-card rounded-xl p-6 transition-all duration-300">
+  <div class="group
 
-    <h3 class="font-h3 text-xl text-on-surface mb-2">CollabBoard</h3>
+clean-card
 
-    <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
+rounded-[32px]
+
+p-8
+
+transition-all
+
+duration-500
+
+hover:-translate-y-2
+
+hover:border-primary-fixed-dim/50
+
+relative
+
+overflow-hidden">
+
+    <h3 class="font-h2 text-[38px] text-white text-on-surface mb-2">CollabBoard</h3>
+
+    <p class="text-[17px] leading-8 text-white/60 mb-3 leading-relaxed">
       CollabBoard is a real-time collaborative whiteboard application designed for teams, students, and remote collaboration. 
       It enables multiple users to draw, sketch, write, and share ideas together instantly using live synchronization.
 
@@ -817,24 +937,24 @@ id="projects">
     </div>
 
     <!-- Info Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 mb-3">
+    <div class="grid grid-cols-2 gap-4 mt-4 mb-3">
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Features</p>
         <p class="text-sm">Real-time drawing, collaborative editing, board sharing, live synchronization</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Tools</p>
         <p class="text-sm">Pen, eraser, shapes, text tool, download, clear board</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Tech Stack</p>
         <p class="text-sm">Flask, Socket.IO, SQLite, JavaScript Canvas API</p>
       </div>
 
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
+      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[160px] flex flex-col justify-center">
         <p class="text-xs text-primary-fixed-dim mb-1">Highlights</p>
         <p class="text-sm">Room-based collaboration, responsive UI, real-time multi-user updates</p>
       </div>
