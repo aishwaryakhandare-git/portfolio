@@ -104,165 +104,35 @@
     },
   }
 </script>
-body{
-background:#050608;
-color:#E7EAEE;
-
-font-family:
-'Inter',
-sans-serif;
-
-background-image:
-radial-gradient(
-circle at top,
-rgba(0,255,255,.06),
-transparent 40%
-);
-
-}
-
-section{
-
-position:relative;
-
-}
-
-h1,h2,h3,h4{
-
-font-family:
-'Sora',
-sans-serif;
-
-}
-
-.clean-card{
-
-background:
-rgba(12,14,18,.75);
-
-backdrop-filter:
-blur(20px);
-
-border:
-1px solid rgba(0,255,255,.08);
-
-border-radius:
-24px;
-
-transition:
-.4s;
-
-box-shadow:
-0 0 40px rgba(0,255,255,.03);
-
-}
-
-.clean-card:hover{
-
-transform:
-translateY(-8px);
-
-border:
-1px solid rgba(0,255,255,.18);
-
-box-shadow:
-0 0 60px rgba(0,255,255,.08);
-
-}
-
-.text-glow{
-
-text-shadow:
-
-0 0 25px rgba(0,255,255,.35);
-
-}
-
-.glow-button{
-
-background:
-#08E7F0;
-
-color:
-black;
-
-box-shadow:
-
-0 0 50px rgba(8,231,240,.25);
-
-}
-
-.glow-button:hover{
-
-transform:
-translateY(-4px);
-
-}
-
-.outline-button{
-
-border:
-1px solid #08E7F0;
-
-color:
-#08E7F0;
-
-}
-
-.outline-button:hover{
-
-background:
-#08E7F0;
-
-color:
-black;
-
-}
-
-.hero-title{
-
-font-family:
-'Sora';
-
-font-weight:
-900;
-
-animation:
-float 6s ease infinite;
-
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(0)
-}
-
-50%{
-transform:translateY(-12px)
-}
-
-100%{
-transform:translateY(0)
-}
-
-}
-
-::-webkit-scrollbar{
-
-width:10px;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-background:
-#08E7F0;
-
-border-radius:
-20px;
-
-}
+<style>
+        body {
+            background-color: #000000;
+            color: #e2e2e2;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .clean-card {
+            background: #121212;
+            border: 1px solid rgba(0, 221, 221, 0.15);
+            box-shadow: 0 0 15px rgba(0, 221, 221, 0.15);
+            transition: all 0.3s ease;
+        }
+        .clean-card:hover {
+            box-shadow: 0 0 25px rgba(0, 221, 221, 0.35);
+            transform: translateY(-3px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(0, 221, 221, 0.4);
+        }
+        .border-glow {
+            box-shadow: 0 0 15px rgba(0, 221, 221, 0.2);
+        }
+        section {
+            scroll-margin-top: 80px;
+        }
     </style>
 <style id="hero-redesign">.hero-bg{background:#121517;background-image:radial-gradient(circle at center,rgba(45,85,80,.35) 0%,rgba(18,21,23,1) 70%);position:relative;overflow:hidden}#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}.hero-title-new{text-shadow:0 0 30px rgba(187,247,208,.15)}</style></head>
 <body class="antialiased selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
@@ -302,81 +172,194 @@ z-10
 w-full
 ">
 
-<!-- Hero Section -->
+<!-- HERO -->
+
 <section
+id="home"
 class="
+relative
 min-h-screen
+overflow-hidden
 flex
 items-center
 justify-center
-text-center
 px-6
-"
-id="home">
+">
 
-<canvas id="particle-canvas"></canvas>
+<!-- Background -->
 
 <div
 class="
-w-full
-max-w-5xl
-mx-auto
-flex
-flex-col
-items-center
-justify-center
-translate-y-[-20px]
+absolute
+inset-0
+bg-[radial-gradient(circle_at_top,rgba(0,255,255,.12),transparent_50%)]
 ">
+</div>
 
-<span class="text-[18px] text-primary-fixed-dim mb-4 tracking-widest inline-block"></span>
-<h1 class="font-h1 text-[64px] md:text-[110px] hero-title-new text-on-surface mb-8 leading-[0.95]">
-  Aishwarya <span class="text-primary-fixed-dim text-glow">Khandare</span>
-</h1>
-<p class="font-h3 text-[28px] text-on-surface-variant mb-6 max-w-3xl">
-Web Developer building practical and scalable applications.
-</p>
+<canvas
+id="particle-canvas"
+class="
+absolute
+inset-0
+">
+</canvas>
+
+
+<!-- CONTENT -->
+
+<div
+class="
+relative
+z-10
+max-w-6xl
+mx-auto
+text-center
+">
 
 <p
 class="
-text-lg
-text-on-surface-variant
-max-w-2xl
-leading-relaxed
-mx-auto">
+uppercase
+tracking-[0.35em]
+text-primary-fixed-dim
+text-sm
+mb-8
+">
+
+PORTFOLIO · WEB DEVELOPER
+
 </p>
+
+
+<h1
+class="
+hero-title
+text-[82px]
+md:text-[150px]
+font-black
+leading-[0.88]
+tracking-[-0.08em]
+text-white
+"
+>
+
+Aishwarya
+
+<br>
+
+<span
+class="
+text-primary-fixed-dim
+text-glow
+">
+
+Khandare
+
+</span>
+
+</h1>
+
+
 
 <div
 class="
+mt-10
+h-[60px]
 flex
 justify-center
 items-center
-gap-4
-mt-10">
+"
+>
+
+<p
+class="
+text-[24px]
+md:text-[32px]
+text-on-surface-variant
+font-medium
+"
+>
+
+<span id="typed"></span>
+
+<span
+class="
+text-primary-fixed-dim
+animate-pulse
+"
+>
+
+|
+
+</span>
+
+</p>
+
+</div>
+
+
+
+<p
+class="
+mt-8
+max-w-3xl
+mx-auto
+text-lg
+leading-[2]
+text-on-surface-variant
+"
+>
+
+Building practical digital experiences through
+clean interfaces,
+full stack systems,
+and scalable applications.
+
+</p>
+
+
+
+<div
+class="
+mt-14
+flex
+justify-center
+gap-6
+flex-wrap
+">
 
 <a
+
 href="resume.pdf"
+
 class="
-px-8
-py-4
-rounded-xl
-bg-primary-fixed-dim
-text-black
-font-semibold">
+glow-button
+px-10
+py-5
+rounded-2xl
+font-bold
+"
+
+>
 
 View Resume
 
 </a>
 
+
+
 <a
+
 href="#footer"
 
 class="
-px-5
-py-4
-rounded-xl
-border
-border-primary-fixed-dim
-text-primary-fixed-dim">
+outline-button
+px-10
+py-5
+rounded-2xl
+font-semibold
+"
+
+>
 
 Get In Touch
 
@@ -385,8 +368,152 @@ Get In Touch
 </div>
 
 
+
+<div
+class="
+mt-24
+flex
+justify-center
+gap-8
+text-sm
+text-on-surface-variant
+flex-wrap
+"
+>
+
+<span>React.js</span>
+
+<span>•</span>
+
+<span>JavaScript</span>
+
+<span>•</span>
+
+<span>Python</span>
+
+<span>•</span>
+
+<span>Firebase</span>
+
+<span>•</span>
+
+<span>MySQL</span>
+
 </div>
+
+</div>
+
 </section>
+
+
+
+<script>
+
+const words=[
+
+"Web Developer",
+
+"Full Stack Developer",
+
+"Building scalable applications",
+
+"Creating modern experiences"
+
+]
+
+let word=0
+let char=0
+let deleting=false
+
+function type(){
+
+const el=
+document.getElementById(
+"typed"
+)
+
+const current=
+words[word]
+
+el.textContent=
+
+deleting
+?
+
+current.slice(
+0,
+char--
+)
+
+:
+
+current.slice(
+0,
+char++
+)
+
+if(
+
+!deleting
+&&
+char>
+current.length
+
+){
+
+deleting=true
+
+setTimeout(
+type,
+1300
+)
+
+return
+
+}
+
+if(
+
+deleting
+&&
+char<0
+
+){
+
+deleting=false
+
+word=
+
+(
+word+1
+)
+
+%
+words.length
+
+}
+
+setTimeout(
+
+type,
+
+deleting
+
+?
+
+40
+
+:
+
+80
+
+)
+
+}
+
+type()
+
+</script>
 <!-- About & Skills Combined -->
 <section
 class="
@@ -404,13 +531,7 @@ px-14
 id="about">
 <div class="flex flex-col md:flex-row gap-16">
 <div class="md:w-1/2">
-<h2 class="
-text-[54px]
-font-black
-tracking-[-0.03em]
-text-white
-mb-10
-">About</h2>
+<h2 class="font-h2 text-h2 text-on-surface mb-6">About</h2>
 <p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
                 I build AI-based applications using Python, Flask, and React.js. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces, creating functional and technically rigorous software.
             </p>
@@ -426,13 +547,7 @@ mb-10
 </div>
 </div>
 <div class="md:w-1/2" id="skills">
-<h2 class="
-text-[54px]
-font-black
-tracking-[-0.03em]
-text-white
-mb-10
-"">Skills</h2>
+<h2 class="font-h2 text-h2 text-on-surface mb-6">Skills</h2>
 <div class="grid grid-cols-2 gap-4"><div class="p-4 clean-card rounded-xl flex items-center justify-center">
 <p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Python</p>
 </div>
@@ -475,13 +590,7 @@ px-6
 "
 id="projects">
 <div class="flex justify-between items-end mb-8">
-<h2 class="
-text-[54px]
-font-black
-tracking-[-0.03em]
-text-white
-mb-10
-"">Projects</h2>
+<h2 class="font-h2 text-h2 text-on-surface">Projects</h2>
 <a class="group flex items-center gap-1 text-on-surface-variant hover:text-primary-fixed-dim transition-colors text-sm font-medium" href="#">
             
 </a>
@@ -749,13 +858,7 @@ mb-10
 <section class="py-16" id="contact">
 <div class="max-w-[980px] mx-auto bg-surface-container-low border border-primary-fixed-dim/20 rounded-2xl p-10 text-center relative overflow-hidden">
 <div class="relative z-10">
-<h2 class="
-text-[54px]
-font-black
-tracking-[-0.03em]
-text-white
-mb-10
-"">Let's build the future <span class="text-primary-fixed-dim">together</span></h2>
+<h2 class="font-h2 text-h2 text-white mb-4">Let's build the future <span class="text-primary-fixed-dim">together</span></h2>
 <p class="font-body-md text-on-surface-variant max-w-md mx-auto mb-8">Ready to bring your vision to life with AI-driven solutions?</p>
 <a class="inline-flex items-center gap-2 px-10 py-4 bg-primary-fixed-dim text-on-primary rounded-full font-h2 text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,221,221,0.2)]" href="mailto:aishwaryakhandare005@gmail.com">Get in Touch <span class="material-symbols-outlined text-lg">send</span></a>
 </div>
