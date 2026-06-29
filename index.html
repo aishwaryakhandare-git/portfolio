@@ -199,6 +199,7 @@ translateY(18px);
         section {
             scroll-margin-top: 80px;
         }
+
     </style>
 <style id="hero-redesign">.hero-bg{background:#121517;background-image:radial-gradient(circle at center,rgba(45,85,80,.35) 0%,rgba(18,21,23,1) 70%);position:relative;overflow:hidden}#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}.hero-title-new{text-shadow:0 0 30px rgba(187,247,208,.15)}</style></head>
 <body class="antialiased selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
@@ -250,25 +251,6 @@ px-10
 ">
 
 <canvas id="particle-canvas"></canvas>
-
-<div
-class="
-absolute
-bottom-0
-left-0
-w-full
-h-[220px]
-opacity-70
-pointer-events-none
-">
-
-<div
-class="
-absolute
-bottom-[-120px]
-left-[-10%]
-w-[120%]
-h-[300px]
 
 bg-[radial-gradient(circle_at_center,rgba(0,221,221,.28),transparent_60%)]
 
@@ -477,57 +459,13 @@ Get In Touch ✈
 
 </div>
 
-<!-- Digital Wave -->
-
-<div
-class="
-absolute
-bottom-[-80px]
-left-0
-w-full
-h-[320px]
-overflow-visible
-pointer-events-none
-z-[1]
-">
-
-<div
-class="
-wave-grid
-absolute
-bottom-[-60px]
-left-[-5%]
-w-[110%]
-h-[420px]
-opacity-80
-">
-</div>
-
-</div>
-
-<div
-class="
-h-[180px]
-w-full
-bg-gradient-to-b
-from-transparent
-to-black
-relative
--z-0
--translate-y-[120px]
-pointer-events-none
-">
-</div>
-
 </section>
 
 <!-- About & Skills Combined -->
 
 <section
 class="
-pt-0
-pb-xl
--mt-[120px]
+py-24
 relative
 z-10
 ">
@@ -1194,5 +1132,68 @@ draw
 }
 
 draw()
+
+const wctx = waveCanvas.getContext("2d");
+
+function resizeWave() {
+    waveCanvas.width = window.innerWidth;
+    waveCanvas.height = 340;
+}
+
+resizeWave();
+window.addEventListener("resize", resizeWave);
+
+let time = 0;
+
+function drawWave() {
+
+    wctx.clearRect(0,0,waveCanvas.width,waveCanvas.height);
+
+    const cols = 90;
+    const rows = 18;
+    const gap = waveCanvas.width / cols;
+
+    for(let y=0;y<rows;y++){
+
+        let previous = null;
+
+        for(let x=0;x<cols;x++){
+
+            const px = x * gap;
+
+            const py =
+                waveCanvas.height
+                - y*16
+                + Math.sin(x*0.35 + time + y*0.4)*18;
+
+            wctx.beginPath();
+            wctx.arc(px,py,1.4,0,Math.PI*2);
+            wctx.fillStyle="rgba(0,221,221,.85)";
+            wctx.fill();
+
+            if(previous){
+
+                wctx.beginPath();
+                wctx.moveTo(previous.x,previous.y);
+                wctx.lineTo(px,py);
+                wctx.strokeStyle="rgba(0,221,221,.18)";
+                wctx.lineWidth=1;
+                wctx.stroke();
+
+            }
+
+            previous={x:px,y:py};
+
+        }
+
+    }
+
+    time += 0.03;
+
+    requestAnimationFrame(drawWave);
+
+}
+
+drawWave();
 
 </script></body></html>
