@@ -746,29 +746,7 @@ function generateCodeLines() {
 
 generateCodeLines();
 
-// ... existing terminal background script ...
-generateCodeLines();
 
-// EXACT ADDITION: Add this right below your existing code inside the <script> tags
-function copyEmailToClipboard() {
-  const email = "aishwaryakhandare005@gmail.com";
-  
-  navigator.clipboard.writeText(email).then(() => {
-    const badge = document.getElementById("copy-badge");
-    
-    // Slide up and reveal the success badge
-    badge.classList.remove("opacity-0", "translate-y-1");
-    badge.classList.add("opacity-100", "translate-y-0");
-    
-    // Hide it again after 2 seconds
-    setTimeout(() => {
-      badge.classList.remove("opacity-100", "translate-y-0");
-      badge.classList.add("opacity-0", "translate-y-1");
-    }, 2000);
-  }).catch(err => {
-    console.error('Could not copy text: ', err);
-  });
-}
 </script>
 
 </body>
