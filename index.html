@@ -1,1199 +1,775 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Aishwarya Khandare | Portfolio</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-                "surface-container-high": "#2a2a2a",
-                "surface-container-low": "#1b1b1b",
-                "surface-container": "#1f1f1f",
-                "outline": "#839493",
-                "on-secondary-container": "#ddcdff",
-                "surface-variant": "#353535",
-                "on-error-container": "#ffdad6",
-                "secondary-fixed-dim": "#d1bcff",
-                "secondary-fixed": "#e9ddff",
-                "surface-bright": "#393939",
-                "on-primary-fixed": "#002020",
-                "on-primary-fixed-variant": "#004f4f",
-                "on-error": "#690005",
-                "secondary": "#d1bcff",
-                "on-tertiary": "#2f3131",
-                "inverse-on-surface": "#303030",
-                "on-surface": "#e2e2e2",
-                "primary-container": "#00fbfb",
-                "on-secondary-fixed-variant": "#5700c9",
-                "tertiary": "#ffffff",
-                "surface-dim": "#131313",
-                "inverse-primary": "#006a6a",
-                "on-tertiary-container": "#636565",
-                "on-surface-variant": "#b9cac9",
-                "surface-container-highest": "#353535",
-                "primary": "#ffffff",
-                "on-tertiary-fixed": "#1a1c1c",
-                "tertiary-fixed": "#e2e2e2",
-                "surface": "#131313",
-                "inverse-surface": "#e2e2e2",
-                "on-primary-container": "#007070",
-                "primary-fixed": "#00fbfb",
-                "tertiary-fixed-dim": "#c6c6c7",
-                "surface-tint": "#00dddd",
-                "background": "#000000",
-                "outline-variant": "#3a4a49",
-                "on-primary": "#003737",
-                "tertiary-container": "#e2e2e2",
-                "error-container": "#93000a",
-                "on-background": "#e2e2e2",
-                "on-tertiary-fixed-variant": "#454747",
-                "on-secondary": "#3c0090",
-                "primary-fixed-dim": "#00dddd",
-                "error": "#ffb4ab",
-                "secondary-container": "#7000ff",
-                "surface-container-lowest": "#0e0e0e",
-                "on-secondary-fixed": "#23005b"
-        },
-        "borderRadius": {
-                "DEFAULT": "0.125rem",
-                "lg": "0.25rem",
-                "xl": "0.5rem",
-                "full": "0.75rem"
-        },
-        "spacing": {
-                "base": "8px",
-                "xl": "64px",
-                "sm": "12px",
-                "xs": "4px",
-                "lg": "32px",
-                "margin": "32px",
-                "gutter": "24px",
-                "md": "24px"
-        },
-        "fontFamily": {
-                "button": ["Inter"],
-                "h2": ["Space Grotesk"],
-                "body-md": ["Inter"],
-                "h4": ["Space Grotesk"],
-                "body-sm": ["Inter"],
-                "h3": ["Space Grotesk"],
-                "label-caps": ["Space Grotesk"],
-                "h1": ["Space Grotesk"],
-                "body-lg": ["Inter"]
-        },
-        "fontSize": {
-                "button": ["16px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600" }],
-                "h2": ["42px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
-                "body-md": ["16px", { "lineHeight": "1.5", "letterSpacing": "0", "fontWeight": "400" }],
-                "h4": ["22px", { "lineHeight": "1.3", "letterSpacing": "0", "fontWeight": "600" }],
-                "body-sm": ["14px", { "lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400" }],
-                "h3": ["28px", { "lineHeight": "1.2", "letterSpacing": "0", "fontWeight": "600" }],
-                "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
-                "h1": ["56px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }]
-        }
-      },
-    },
-  }
-</script>
-<style>
-        body {
-            background-color: #000000;
-            color: #e2e2e2;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-        .clean-card {
-            background: #121212;
-            border: 1px solid rgba(0, 221, 221, 0.15);
-            box-shadow: 0 0 15px rgba(0, 221, 221, 0.15);
-            transition: all 0.3s ease;
-        }
-        .clean-card:hover {
-            box-shadow: 0 0 25px rgba(0, 221, 221, 0.35);
-            transform: translateY(-3px);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .text-glow {
-            text-shadow: 0 0 15px rgba(0, 221, 221, 0.4);
-        }
-        .wave-grid{
-
-background:
-
-radial-gradient(
-circle,
-rgba(0,221,221,.85)
-1px,
-
-transparent 1px
-);
-
-background-size:
-
-18px 18px;
-
-transform:
-
-perspective(700px)
-
-rotateX(75deg);
-
-animation:
-
-waveMove 8s linear infinite;
-
-opacity:.55;
-
-filter:
-
-drop-shadow(
-0 0 12px
-rgba(0,221,221,.35)
-);
-
-}
-
-
-
-@keyframes waveMove{
-
-0%{
-
-transform:
-
-perspective(700px)
-
-rotateX(75deg)
-
-translateY(0);
-
-}
-
-100%{
-
-transform:
-
-perspective(700px)
-
-rotateX(75deg)
-
-translateY(18px);
-
-}
-
-}
-        .border-glow {
-            box-shadow: 0 0 15px rgba(0, 221, 221, 0.2);
-        }
-        section {
-            scroll-margin-top: 80px;
-        }
-
-    </style>
-<style id="hero-redesign">.hero-bg{background:#121517;background-image:radial-gradient(circle at center,rgba(45,85,80,.35) 0%,rgba(18,21,23,1) 70%);position:relative;overflow:hidden}#particle-canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none;}.hero-title-new{text-shadow:0 0 30px rgba(187,247,208,.15)}</style></head>
-<body class="antialiased selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
-<!-- TopAppBar -->
-<nav
-class="
-fixed
-top-0
-left-0
-right-0
-z-50
-bg-black/20
-backdrop-blur-md
-">
-
-  <div class="flex items-center justify-between px-8 h-16 max-w-[1100px] mx-auto">
-
-    <!-- LEFT: Name -->
-    <a href="#home" class="text-on-surface font-bold text-lg">
-      Aishwarya Khandare
-    </a>
-
-    <!-- RIGHT: Menu -->
-    <div class="hidden md:flex gap-8 items-center">
-      <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors text-[11px] tracking-widest" href="#about">ABOUT</a>
-      <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors text-[11px] tracking-widest" href="#projects">PROJECTS</a>
-      <a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors text-[11px] tracking-widest" href="#skills">SKILLS</a>
-    </div>
-
-  </div>
-
-</nav>
-<main
-class="
-relative
-z-10
-w-full
-">
-
-<!-- Hero Section -->
-
-<section
-id="home"
-class="
-min-h-screen
-relative
-overflow-hidden
-px-10
-">
-
-<canvas id="particle-canvas"></canvas>
-
-bg-[radial-gradient(circle_at_center,rgba(0,221,221,.28),transparent_60%)]
-
-blur-[70px]
-">
-</div>
-
-</div>
-
-<div
-class="
-max-w-[1500px]
-mx-auto
-min-h-screen
-grid
-grid-cols-1
-lg:grid-cols-[180px_1fr]
-items-center
-relative
-z-10
-">
-
-<!-- LEFT -->
-
-<div
-class="
-hidden
-lg:flex
-flex-col
-justify-center
-text-left
-border-r
-border-white/10
-h-[70vh]
-">
-
-<div class="text-primary-fixed-dim text-[42px] mb-16">
-
->
-
-_
-
-</div>
-
-<p class="text-white/40 leading-8">
-
-// Welcome to<br>
-my portfolio
-
-</p>
-
-</div>
-
-
-<!-- RIGHT -->
-
-<div
-class="
-flex
-flex-col
-justify-center
-pl-0
-lg:pl-20 lg:translate-y-14
-">
-
-<h1
-class="
-font-h1
-leading-[0.85]
-mb-10
-">
-
-<div
-class="
-text-[72px]
-md:text-[118px]
-font-bold
-text-white
-">
-
-Aishwarya
-
-</div>
-
-<div
-class="
-text-[72px]
-md:text-[118px]
-font-bold
-text-primary-fixed-dim
-text-glow
-">
-
-Khandare
-
-</div>
-
-</h1>
-
-
-<div
-class="
-mb-10
-">
-
-<div
-class="
-flex
-items-center
-gap-4
-flex-wrap
-text-[18px]
-">
-
-<span
-class="
-text-primary-fixed-dim
-font-semibold
-">
-
-Web Developer
-
-</span>
-
-<span class="text-white/40">|</span>
-
-<span class="text-white/60">
-
-Problem Solver
-
-</span>
-
-<span class="text-white/40">|</span>
-
-<span class="text-white/60">
-
-Tech Enthusiast
-
-</span>
-
-</div>
-
-</div>
-
-
-
-<p
-class="
-text-white/60
-text-[22px]
-leading-relaxed
-max-w-[700px]
-mb-14
-">
-
-&gt; I build practical and scalable web applications that solve real-world problems.
-
-</p>
-
-
-<div
-class="
-flex
-gap-6
-flex-wrap
-">
-
-<a
-href="resume.pdf"
-
-class="
-px-10
-py-5
-bg-primary-fixed-dim
-text-black
-rounded-xl
-font-semibold
-shadow-[0_0_40px_rgba(0,221,221,.3)]
-">
-
-View Resume ↗
-
-</a>
-
-
-<a
-href="#footer"
-
-class="
-px-10
-py-5
-border
-border-primary-fixed-dim
-text-primary-fixed-dim
-rounded-xl
-hover:bg-primary-fixed-dim/10
-">
-
-Get In Touch ✈
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- About & Skills Combined -->
-
-<section
-class="
-py-24
-relative
-z-10
-">
-
-<div
-class="
-max-w-[1500px]
-mx-auto
-px-14
-"
-id="about">
-<div
-class="
-grid
-grid-cols-1
-lg:grid-cols-[1.2fr_.8fr]
-gap-12
-items-start
-">
-<div
-class="
-clean-card
-rounded-[32px]
-p-10
-relative
-overflow-hidden
-">
-
-<h2
-class="
-font-h2
-text-[64px]
-text-white
-mb-8
-">About</h2>
-<p
-class="
-text-primary-fixed-dim
-tracking-[.3em]
-uppercase
-text-[12px]
-mb-6
-">
-
-// About
-
-</p>
-<p class="font-body-lg text-on-surface-variant mb-6 leading-relaxed">
-                I build AI-based applications using Python, Flask, and React.js. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces, creating functional and technically rigorous software.
-            </p>
-<div class="flex flex-wrap gap-3">
-<div class="px-4 py-2 clean-card rounded-lg flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-fixed-dim text-xl">memory</span>
-<span class="text-sm font-medium">AI Focused</span>
-</div>
-<div class="px-4 py-2 clean-card rounded-lg flex items-center gap-2">
-<span class="material-symbols-outlined text-primary-fixed-dim text-xl">code_blocks</span>
-<span class="text-sm font-medium">Web Artisan</span>
-</div>
-</div>
-</div>
-<div
-id="skills"
-
-class="
-clean-card
-rounded-[32px]
-p-10
-">
-
-<h2
-class="
-font-h2
-text-[48px]
-text-white
-mb-8
-">Skills</h2>
-<p
-class="
-text-primary-fixed-dim
-tracking-[.3em]
-uppercase
-text-[12px]
-mb-8
-">
-
-// Skills
-
-</p>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-5"><div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Python</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">React.js</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">MySQL</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Firebase</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Javascript</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">Typescript</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">HTML</p>
-</div>
-<div class="p-4 clean-card rounded-xl flex items-center justify-center">
-<p class="text-sm text-primary-fixed-dim font-semibold uppercase tracking-widest">CSS</p>
-</div></div>
-</div>
-</div>
-</div>
-
-</section>
-
-<!-- Projects Section -->
-<section
-class="py-xl">
-
-<div
-class="
-max-w-[1180px]
-mx-auto
-px-6
-"
-id="projects">
-<div class="flex justify-between items-end mb-8">
-<h2 class="font-h2 text-h2 text-on-surface">Projects</h2>
-<a class="group flex items-center gap-1 text-on-surface-variant hover:text-primary-fixed-dim transition-colors text-sm font-medium" href="#">
-            
-</a>
-</div>
-<div class="flex flex-col gap-6">
-
-  <!-- SmartMark -->
-  <div class="group clean-card rounded-xl p-6 transition-all duration-300">
-
-    <h3 class="font-h3 text-xl text-on-surface text-on-surface mb-2">SmartMark</h3>
-
-    <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
-      SmartMark is a full-stack face recognition-based attendance system designed to automate and improve traditional attendance processes. 
-      It uses real-time facial detection to accurately mark attendance, reducing manual errors and preventing proxy attendance.
-
-      The system includes role-based modules for Admin, Teacher, and Student. Admins manage users and classes, teachers conduct sessions, 
-      and students mark attendance using live face verification. Firebase integration ensures real-time data storage and synchronization.
-    </p>
-
-    <!-- Tech Tags -->
-    <div class="flex gap-2 mb-3 flex-wrap">
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">FLASK</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">OPENCV</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">FIREBASE</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">HTML</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">CSS</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">JS</span>
-    </div>
-
-    <!-- Info Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 -4 mb-3">
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Features</p>
-        <p class="text-sm">Real-time face detection, automated attendance, secure verification</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Modules</p>
-        <p class="text-sm">Admin, Teacher, Student role-based system</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Tech Stack</p>
-        <p class="text-sm">Python, Flask, OpenCV, Firebase, HTML/CSS</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Highlights</p>
-        <p class="text-sm">Reduced manual errors, scalable system, real-time sync</p>
-      </div>
-
-    </div>
-
-    <!-- KEEP THIS SAME -->
-    <a href="https://github.com/aishwaryakhandare-git/smartmark" target="_blank"
-      class="text-primary-fixed-dim text-sm font-medium hover:underline inline-block mt-2">
-      View Project →
-    </a>
-
-  </div>
-
-  <!-- AirCare AI -->
-
-  <div class="group
-
-clean-card
-
-rounded-[32px]
-
-p-8
-
-transition-all
-
-duration-500
-
-hover:-translate-y-2
-
-hover:border-primary-fixed-dim/50
-
-relative
-
-overflow-hidden">
-
-  <h3 class="font-h3 text-xl text-on-surface text-on-surface mb-2">
-  AirCare AI 🌿
-  </h3>
-
-  <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
-
-  AirCare AI is a modern full-stack air quality monitoring platform designed to provide real-time AQI insights, environmental analytics, and personalized health recommendations through an interactive dashboard experience.
-
-  Users can search any city to instantly fetch live air quality data along with environmental parameters including temperature, humidity, UV index, pollutant concentration, and overall AQI status.
-
-  The platform simplifies environmental monitoring through visual analytics and helps users understand pollutants such as PM2.5, PM10, CO, NO₂, SO₂, and O₃ with health-focused recommendations.
-
-  </p>
-
-  <!-- Tech -->
-
-  <div class="flex gap-2 mb-3 flex-wrap">
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  REACT.JS
-  </span>
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  FLASK
-  </span>
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  PYTHON
-  </span>
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  SQLITE
-  </span>
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  AQICN API
-  </span>
-
-  <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">
-  OPEN-METEO
-  </span>
-
-  </div>
-
-
-  <!-- Info Cards -->
-
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 mb-3">
-
-
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-
-  <p class="text-xs text-primary-fixed-dim mb-1">
-
-  Features
-
-  </p>
-
-  <p class="text-sm">
-
-  Real-time AQI monitoring, smart city search, pollution analytics, responsive dashboard
-
-  </p>
-
-  </div>
-
-
-
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-
-  <p class="text-xs text-primary-fixed-dim mb-1">
-
-  Pages
-
-  </p>
-
-  <p class="text-sm">
-
-  Home, AQI Dashboard, Analytics, Health Recommendations, Favorites, About
-
-  </p>
-
-  </div>
-
-
-
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-
-  <p class="text-xs text-primary-fixed-dim mb-1">
-
-  Data Sources
-
-  </p>
-
-  <p class="text-sm">
-
-  WAQI / AQICN API + Open-Meteo API
-
-  </p>
-
-  </div>
-
-
-
-  <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-
-  <p class="text-xs text-primary-fixed-dim mb-1">
-
-  Highlights
-
-  </p>
-
-  <p class="text-sm">
-
-  Live AQI insights, environmental analytics, health recommendations
-
-  </p>
-
-  </div>
-
-  </div>
-
-
-  <a
-  href="https://github.com/aishwaryakhandare-git/AirCare-AI"
-  target="_blank"
-  class="text-primary-fixed-dim text-sm font-medium hover:underline inline-block mt-2">
-
-  View Project →
-
-  </a>
-
-  </div>
-
-  <!-- CollabBoard -->
-  <div class="group
-
-clean-card
-
-rounded-[32px]
-
-p-8
-
-transition-all
-
-duration-500
-
-hover:-translate-y-2
-
-hover:border-primary-fixed-dim/50
-
-relative
-
-overflow-hidden">
-
-    <h3 class="font-h3 text-xl text-on-surface text-on-surface mb-2">CollabBoard</h3>
-
-    <p class="text-sm text-on-surface-variant mb-3 leading-relaxed">
-      CollabBoard is a real-time collaborative whiteboard application designed for teams, students, and remote collaboration. 
-      It enables multiple users to draw, sketch, write, and share ideas together instantly using live synchronization.
-
-      The application supports room-based collaboration where users can create private boards, share invite links, and work together in real time. 
-      It includes drawing tools, shapes, text support, board sharing, live updates, and persistent storage for collaborative sessions.
-    </p>
-
-    <!-- Tech Tags -->
-    <div class="flex gap-2 mb-3 flex-wrap">
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">PYTHON</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">FLASK</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">SOCKET.IO</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">SQLITE</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">HTML</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">CSS</span>
-      <span class="px-2 py-1 bg-surface-container text-[10px] text-primary-fixed-dim font-bold rounded">JAVASCRIPT</span>
-    </div>
-
-    <!-- Info Boxes -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 mb-3">
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Features</p>
-        <p class="text-sm">Real-time drawing, collaborative editing, board sharing, live synchronization</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Tools</p>
-        <p class="text-sm">Pen, eraser, shapes, text tool, download, clear board</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Tech Stack</p>
-        <p class="text-sm">Flask, Socket.IO, SQLite, JavaScript Canvas API</p>
-      </div>
-
-      <div class="bg-surface-container-low p-3 rounded-lg border border-primary-fixed-dim/20 min-h-[110px] flex flex-col justify-center">
-        <p class="text-xs text-primary-fixed-dim mb-1">Highlights</p>
-        <p class="text-sm">Room-based collaboration, responsive UI, real-time multi-user updates</p>
-      </div>
-
-    </div>
-
-    <!-- KEEP THIS SAME -->
-    <a href="https://github.com/aishwaryakhandare-git/CollabBoard-Real-Time-Whiteboard" target="_blank"
-      class="text-primary-fixed-dim text-sm font-medium hover:underline inline-block mt-2">
-      View Project →
-    </a>
-
-  </div>
-
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Aishwarya Khandare | Portfolio</title>
   
-
-</div>
-</div>
-
-<!-- Contact Section -->
-<section class="py-16" id="contact">
-<div class="max-w-[980px] mx-auto bg-surface-container-low border border-primary-fixed-dim/20 rounded-2xl p-10 text-center relative overflow-hidden">
-<div class="relative z-10">
-<h2 class="font-h2 text-h2 text-white mb-4">Let's build the future <span class="text-primary-fixed-dim">together</span></h2>
-<p class="font-body-md text-on-surface-variant max-w-md mx-auto mb-8">Ready to bring your vision to life with AI-driven solutions?</p>
-<a class="inline-flex items-center gap-2 px-10 py-4 bg-primary-fixed-dim text-on-primary rounded-full font-h2 text-lg hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,221,221,0.2)]" href="mailto:aishwaryakhandare005@gmail.com">Get in Touch <span class="material-symbols-outlined text-lg">send</span></a>
-</div>
-<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-[120px] text-white/5 select-none pointer-events-none">alternate_email</span>
-</div>
-</section>
-</main>
-<footer id="footer" class="w-full py-10 bg-black">
-
-  <div class="flex justify-between items-center gap-6 px-8 max-w-[1100px] mx-auto flex-wrap">
-
-    <!-- LEFT -->
-    <div>
-      <h3 class="text-white font-semibold">
-        Aishwarya Khandare
-      </h3>
-      <p class="text-xs text-on-surface-variant">
-        © 2026 Aishwarya Khandare.
-      </p>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="flex items-center gap-6 flex-wrap">
-      <span class="text-lg text-white font-semibold">
-        Connect with Me
-      </span>
-
-      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank"
-         class="flex items-center gap-2 px-5 py-2 border border-primary-fixed-dim 
-         text-primary-fixed-dim rounded-md hover:bg-primary-fixed-dim hover:text-black transition">
-        <i class="fab fa-linkedin"></i>
-        LinkedIn
-      </a>
-
-      <a href="https://github.com/aishwaryakhandare-git" target="_blank"
-         class="flex items-center gap-2 px-5 py-2 border border-primary-fixed-dim 
-         text-primary-fixed-dim rounded-md hover:bg-primary-fixed-dim hover:text-black transition">
-        <i class="fab fa-github"></i>
-        GitHub
-      </a>
-
-      <a href="mailto:aishwaryakhandare005@gmail.com"
-         class="flex items-center gap-2 px-5 py-2 border border-primary-fixed-dim 
-         text-primary-fixed-dim rounded-md hover:bg-primary-fixed-dim hover:text-black transition">
-        <i class="fas fa-envelope"></i>
-        Email
-      </a>
-    </div>
-
-  </div>
-
-</footer>
-<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
-style="position:fixed; bottom:20px; right:20px; padding:10px;">
-⬆
-</button>
-<script>
-
-const canvas=
-document.getElementById(
-"particle-canvas"
-)
-
-const ctx=
-canvas.getContext("2d")
-
-canvas.width=
-window.innerWidth
-
-canvas.height=
-window.innerHeight
-
-let dots=[]
-
-for(
-let i=0;
-i<35;
-i++
-){
-
-dots.push({
-
-x:
-Math.random()*canvas.width,
-
-y:
-Math.random()*canvas.height,
-
-dx:
-(Math.random()-.5)*.3,
-
-dy:
-(Math.random()-.5)*.3
-
-})
-
-}
-
-let mouse={
-x:null,
-y:null
-}
-
-window.addEventListener(
-"mousemove",
-
-e=>{
-
-mouse.x=e.clientX
-
-mouse.y=e.clientY
-
-}
-
-)
-
-function draw(){
-
-ctx.clearRect(
-0,
-0,
-canvas.width,
-canvas.height
-)
-
-dots.forEach(
-a=>{
-
-a.x+=a.dx
-
-a.y+=a.dy
-
-ctx.fillStyle=
-"white"
-
-ctx.beginPath()
-
-ctx.arc(
-a.x,
-a.y,
-2,
-0,
-6.2
-)
-
-ctx.fill()
-
-let count=0
-
-dots.forEach(
-b=>{
-
-if(count>2)
-return
-
-let d=
-Math.hypot(
-a.x-b.x,
-a.y-b.y
-)
-
-if(d<90){
-
-ctx.strokeStyle=
-"rgba(187,247,208,.12)"
-
-ctx.beginPath()
-
-ctx.moveTo(
-a.x,
-a.y
-)
-
-ctx.lineTo(
-b.x,
-b.y
-)
-
-ctx.stroke()
-
-count++
-
-}
-
-}
-
-)
-
-if(mouse.x){
-
-let md=
-Math.hypot(
-a.x-mouse.x,
-a.y-mouse.y
-)
-
-if(md<120){
-
-ctx.strokeStyle=
-"rgba(187,247,208,.3)"
-
-ctx.beginPath()
-
-ctx.moveTo(
-a.x,
-a.y
-)
-
-ctx.lineTo(
-mouse.x,
-mouse.y
-)
-
-ctx.stroke()
-
-}
-
-}
-
-}
-
-)
-
-requestAnimationFrame(
-draw
-)
-
-}
-
-draw()
-
-const wctx = waveCanvas.getContext("2d");
-
-function resizeWave() {
-    waveCanvas.width = window.innerWidth;
-    waveCanvas.height = 340;
-}
-
-resizeWave();
-window.addEventListener("resize", resizeWave);
-
-let time = 0;
-
-function drawWave() {
-
-    wctx.clearRect(0,0,waveCanvas.width,waveCanvas.height);
-
-    const cols = 90;
-    const rows = 18;
-    const gap = waveCanvas.width / cols;
-
-    for(let y=0;y<rows;y++){
-
-        let previous = null;
-
-        for(let x=0;x<cols;x++){
-
-            const px = x * gap;
-
-            const py =
-                waveCanvas.height
-                - y*16
-                + Math.sin(x*0.35 + time + y*0.4)*18;
-
-            wctx.beginPath();
-            wctx.arc(px,py,1.4,0,Math.PI*2);
-            wctx.fillStyle="rgba(0,221,221,.85)";
-            wctx.fill();
-
-            if(previous){
-
-                wctx.beginPath();
-                wctx.moveTo(previous.x,previous.y);
-                wctx.lineTo(px,py);
-                wctx.strokeStyle="rgba(0,221,221,.18)";
-                wctx.lineWidth=1;
-                wctx.stroke();
-
-            }
-
-            previous={x:px,y:py};
-
-        }
-
+  <!-- Tailwind CSS & Google Fonts -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Elegant Off-White / Cream Base
+            bgCream: "#F4F1EA",
+            textDark: "#111827",
+            textMuted: "#6B7280",
+            // Deep Purple / Violet Accent Color Palette
+            brandViolet: "#7C3AED",
+            brandVioletHover: "#6D28D9",
+            brandVioletLight: "#EDE9FE",
+            accentBorder: "rgba(124, 58, 237, 0.15)",
+          },
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            grotesk: ["Space Grotesk", "sans-serif"],
+          },
+          borderRadius: {
+            '3xl': '24px',
+          }
+        },
+      },
+    }
+  </script>
+  
+  <style>
+    body {
+      background-color: #F4F1EA;
+      color: #111827;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
     }
 
-    time += 0.03;
+    /* Soft neon purple drop shadow / glow for headings and cards */
+    .glow-purple {
+      text-shadow: 0 0 30px rgba(124, 58, 237, 0.35);
+    }
+    
+    .card-shadow {
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(124, 58, 237, 0.05);
+    }
 
-    requestAnimationFrame(drawWave);
+    /* Infinite Marquee Animation for Tech Ticker */
+    @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+    
+    .animate-marquee {
+      animation: marquee 30s linear infinite;
+    }
 
+    /* Clean coding background dynamic terminal logic - FIXED to cover entire page */
+    .code-terminal-bg {
+      position: fixed; /* Fixed so it spans the entire viewport as you scroll */
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0; /* Behind everything else */
+      overflow: hidden;
+      opacity: 0.20; /* Kept very subtle so it doesn't distract from content */
+    }
+
+    .scrolling-code-line {
+      position: absolute;
+      font-family: monospace;
+      font-size: 13px;
+      color: #7C3AED;
+      white-space: nowrap;
+      animation: scrollUp 22s linear infinite;
+    }
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(105vh);
+      }
+      100% {
+        transform: translateY(-10vh);
+      }
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brandViolet selection:text-white">
+
+<!-- Entire Page Scrolling Coding Statements Background -->
+<div class="code-terminal-bg" id="scrolling-code-container"></div>
+
+<!-- Fixed Navigation Bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-[#F4F1EA]/80 backdrop-blur-md border-b border-black/5">
+  <div class="flex items-center justify-between px-8 h-20 max-w-[1400px] mx-auto">
+    <!-- Brand Logo Icon Group -->
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-brandViolet flex items-center justify-center text-white font-bold text-sm tracking-tighter">
+        AK
+      </div>
+      <a href="#home" class="text-textDark font-bold text-base font-grotesk tracking-tight">
+        Aishwarya Khandare
+      </a>
+    </div>
+
+    <!-- Middle Link Nav -->
+    <div class="hidden md:flex gap-8 items-center">
+      <a class="text-textMuted hover:text-brandViolet font-medium transition-colors text-sm" href="#about">About</a>
+      <a class="text-textMuted hover:text-brandViolet font-medium transition-colors text-sm" href="#projects">Projects</a>
+      <a class="text-textMuted hover:text-brandViolet font-medium transition-colors text-sm" href="#skills">Skills</a>
+      <a class="text-textMuted hover:text-brandViolet font-medium transition-colors text-sm" href="#contact">Contact</a>
+    </div>
+
+    <!-- CTA Button -->
+    <div>
+      <a href="mailto:aishwaryakhandare005@gmail.com" class="px-6 py-2.5 bg-brandViolet hover:bg-brandVioletHover text-white rounded-full font-semibold text-sm shadow-[0_4px_14px_rgba(124,58,237,0.35)] transition-all">
+        Hire Me
+      </a>
+    </div>
+  </div>
+</nav>
+
+<main class="relative z-10 w-full pt-20">
+
+  <!-- HERO SECTION -->
+  <section id="home" class="min-h-[90vh] relative flex items-center overflow-hidden px-6 lg:px-16">
+    
+    <!-- Purple Soft Aura Radial Spot behind Title -->
+    <div class="absolute top-[40%] left-[30%] w-[500px] h-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-brandViolet/10 blur-[120px] pointer-events-none z-0"></div>
+
+    <div class="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 items-center relative z-10 py-12">
+      
+      <!-- Hero Details: Left Column -->
+      <div class="flex flex-col text-left">
+        <!-- Badge Indicator -->
+        <div class="flex items-center gap-4 mb-8">
+          <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-brandVioletLight text-brandViolet">
+            Available For Work
+          </span>
+          <div class="flex items-center gap-1.5 text-xs text-textMuted font-medium">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            India · 2026
+          </div>
+        </div>
+
+        <!-- Huge Oversized Names Stack -->
+        <h1 class="font-grotesk tracking-tight leading-[0.9] mb-8">
+          <span class="block text-[76px] sm:text-[100px] md:text-[132px] font-bold text-textDark tracking-tighter">
+            Aishwarya
+          </span>
+          <span class="block text-[76px] sm:text-[100px] md:text-[132px] font-bold text-brandViolet glow-purple tracking-tighter">
+            Khandare
+          </span>
+        </h1>
+
+        <p class="text-textMuted text-[18px] md:text-[22px] leading-relaxed max-w-[640px] mb-12">
+          I build practical and scalable web applications that solve real-world problems — from AI-powered attendance systems to real-time collaborative tools.
+        </p>
+
+        <!-- CTA Trigger Actions -->
+        <div class="flex gap-4 sm:gap-6 flex-wrap">
+          <a href="resume.pdf" class="px-8 py-4 bg-[#111827] text-white rounded-full font-medium hover:bg-black hover:shadow-lg transition-all flex items-center gap-2">
+            View Resume <span class="text-lg">↗</span>
+          </a>
+          <a href="#contact" class="px-8 py-4 bg-transparent border border-black/10 text-textDark rounded-full font-medium hover:bg-black/5 transition-all">
+            Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Side Block: Right Column -->
+      <div class="flex flex-row lg:flex-col items-center justify-between lg:justify-center gap-10 lg:gap-16 border-t lg:border-t-0 lg:border-l border-black/5 pt-10 lg:pt-0 lg:pl-16 w-full lg:w-auto">
+        <div class="text-center lg:text-left">
+          <div class="text-4xl md:text-5xl font-bold font-grotesk text-textDark">Web</div>
+          <div class="text-xs text-textMuted tracking-wider uppercase font-semibold mt-1">Developer</div>
+        </div>
+        <div class="text-center lg:text-left">
+          <div class="text-4xl md:text-5xl font-bold font-grotesk text-textDark">AI</div>
+          <div class="text-xs text-textMuted tracking-wider uppercase font-semibold mt-1">Focused</div>
+        </div>
+        <div class="text-center lg:text-left">
+          <div class="text-4xl md:text-5xl font-bold font-grotesk text-textDark">FS</div>
+          <div class="text-xs text-textMuted tracking-wider uppercase font-semibold mt-1">Full-Stack</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INFINITE SKILLS TICKER / MARQUEE -->
+  <section class="w-full py-6 bg-white border-y border-black/[0.06] overflow-hidden whitespace-nowrap flex items-center relative z-20">
+    <div class="flex animate-marquee text-xs font-bold tracking-[0.25em] text-[#6B7280]">
+      <span class="mx-12">TYPESCRIPT</span>
+      <span class="mx-12">SQLITE</span>
+      <span class="mx-12">AI/ML</span>
+      <span class="mx-12">REST APIS</span>
+      <span class="mx-12">FULL-STACK</span>
+      <span class="mx-12">WEB DEV</span>
+      <span class="mx-12">PYTHON</span>
+      <span class="mx-12">REACT.JS</span>
+      <span class="mx-12">FLASK</span>
+      <span class="mx-12">OPENCV</span>
+      <span class="mx-12">FIREBASE</span>
+      
+      <!-- Duplicated for infinite continuous effect -->
+      <span class="mx-12">TYPESCRIPT</span>
+      <span class="mx-12">SQLITE</span>
+      <span class="mx-12">AI/ML</span>
+      <span class="mx-12">REST APIS</span>
+      <span class="mx-12">FULL-STACK</span>
+      <span class="mx-12">WEB DEV</span>
+      <span class="mx-12">PYTHON</span>
+      <span class="mx-12">REACT.JS</span>
+      <span class="mx-12">FLASK</span>
+      <span class="mx-12">OPENCV</span>
+      <span class="mx-12">FIREBASE</span>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="py-24 relative z-20">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+      
+      <!-- Styled Label -->
+      <div class="flex items-center gap-3 mb-10">
+        <span class="text-xs px-2.5 py-1 font-bold font-grotesk bg-brandVioletLight text-brandViolet rounded">01</span>
+        <span class="text-xs uppercase font-bold tracking-widest text-[#6B7280]">BACKGROUND</span>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-[1.2fr_.8fr] gap-8 items-stretch">
+        
+        <!-- Left Big Feature Card -->
+        <div class="bg-white rounded-3xl p-8 md:p-12 border border-black/[0.04] card-shadow flex flex-col justify-between">
+          <div>
+            <h2 class="font-grotesk text-5xl md:text-6xl text-textDark font-bold mb-8">
+              About <span class="text-brandViolet">Me</span>
+            </h2>
+            <p class="text-textMuted text-lg leading-relaxed mb-6">
+              I build AI-based applications using Python, Flask, and React.js. My journey focuses on bridging the gap between intelligent algorithms and user-centric web interfaces — creating software that is both technically rigorous and genuinely useful.
+            </p>
+            <p class="text-textMuted text-lg leading-relaxed mb-10">
+              Currently pursuing my degree in Computer Science, I am passionate about real-world problem solving through code — from face recognition systems to environmental monitoring platforms.
+            </p>
+          </div>
+          
+          <!-- Category Accent Badges -->
+          <div class="flex flex-wrap gap-3">
+            <span class="px-5 py-2.5 bg-neutral-100 rounded-full text-sm font-semibold text-textDark flex items-center gap-2">
+              🤖 AI Focused
+            </span>
+            <span class="px-5 py-2.5 bg-neutral-100 rounded-full text-sm font-semibold text-textDark flex items-center gap-2">
+              ⚡ Full-Stack
+            </span>
+            <span class="px-5 py-2.5 bg-neutral-100 rounded-full text-sm font-semibold text-textDark flex items-center gap-2">
+              🔍 Problem Solver
+            </span>
+          </div>
+        </div>
+
+        <!-- Right stacked Info Cards Column -->
+        <div class="flex flex-col gap-6 justify-between">
+          
+          <div class="bg-white rounded-3xl p-8 border border-black/[0.04] card-shadow flex items-center gap-6">
+            <span class="text-3xl">🎓</span>
+            <div>
+              <h4 class="text-base font-bold text-textDark font-grotesk">Bachelor's of Information Technology</h4>
+              <p class="text-sm text-textMuted mt-1">Graduate</p>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-3xl p-8 border border-black/[0.04] card-shadow flex items-center gap-6">
+            <span class="text-3xl">📍</span>
+            <div>
+              <h4 class="text-base font-bold text-textDark font-grotesk">Based in India</h4>
+              <p class="text-sm text-textMuted mt-1">Open to remote opportunities</p>
+            </div>
+          </div>
+
+          <!-- Solid Violet Stat Card -->
+          <div class="bg-brandViolet text-white rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden h-44 shadow-lg">
+            <div class="absolute -right-4 -bottom-4 w-28 h-28 bg-white/10 rounded-full pointer-events-none"></div>
+            <h3 class="text-5xl font-bold font-grotesk">Web Development</h3>
+            <div>
+              <h4 class="text-base font-bold font-grotesk">Full-stack projects shipped</h4>
+              <p class="text-xs text-white/70 mt-1">Python · React · Flask</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK SKILLS SECTION -->
+  <section id="skills" class="py-12 relative z-20">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+      
+      <!-- Big White Skills Tracker Panel -->
+      <div class="bg-white rounded-3xl p-8 md:p-12 border border-black/[0.04] card-shadow">
+        
+        <!-- Section Title & Badges Row -->
+        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12">
+          <h2 class="font-grotesk text-4xl md:text-5xl text-textDark font-bold">
+            Tech <span class="text-brandViolet">Stack</span>
+          </h2>
+          <!-- Horizontal Skills Micro-tags -->
+          <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">OpenCV</span>
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">Socket.IO</span>
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">SQLite</span>
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">REST APIs</span>
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">GSAP</span>
+          <span class="px-3 py-1.5 border border-brandViolet/25 text-brandViolet text-[10px] font-bold rounded uppercase tracking-wider cursor-default transition-all duration-300 hover:bg-brandViolet hover:text-white hover:border-brandViolet hover:shadow-[0_4px_12px_rgba(124,58,237,0.25)]">Git</span>
+        </div>
+        </div>
+
+        <!-- 2 Column Progress Bar Structure -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-8">
+          
+          <!-- Column 1 -->
+          <div class="space-y-6">
+            <!-- Python -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">Python</span>
+                <span class="text-xs font-bold text-brandViolet">90%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 90%;"></div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">JavaScript</span>
+                <span class="text-xs font-bold text-brandViolet">88%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 88%;"></div>
+              </div>
+            </div>
+
+            <!-- Flask -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">Flask</span>
+                <span class="text-xs font-bold text-brandViolet">82%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 82%;"></div>
+              </div>
+            </div>
+
+            <!-- MySQL -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">MySQL</span>
+                <span class="text-xs font-bold text-brandViolet">72%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 72%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="space-y-6">
+            <!-- React.js -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">React.js</span>
+                <span class="text-xs font-bold text-brandViolet">85%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 85%;"></div>
+              </div>
+            </div>
+
+            <!-- TypeScript -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">TypeScript</span>
+                <span class="text-xs font-bold text-brandViolet">78%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 78%;"></div>
+              </div>
+            </div>
+
+            <!-- Firebase -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">Firebase</span>
+                <span class="text-xs font-bold text-brandViolet">75%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 75%;"></div>
+              </div>
+            </div>
+
+            <!-- HTML/CSS -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <span class="text-base font-semibold text-textDark">HTML/CSS</span>
+                <span class="text-xs font-bold text-brandViolet">92%</span>
+              </div>
+              <div class="w-full h-2 bg-neutral-100 rounded-full overflow-hidden">
+                <div class="h-full bg-brandViolet rounded-full" style="width: 92%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SHOWCASE SECTION -->
+  <section id="projects" class="py-24 relative z-20">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+      
+      <!-- Section Title Label & Text Info -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-xs px-2.5 py-1 font-bold font-grotesk bg-brandVioletLight text-brandViolet rounded">02</span>
+            <span class="text-xs uppercase font-bold tracking-widest text-[#6B7280]">SELECTED WORK</span>
+          </div>
+          <h2 class="font-grotesk text-6xl font-bold text-textDark">Projects</h2>
+        </div>
+        <p class="text-textMuted max-w-sm text-right hidden md:block">
+          Three full-stack applications built to solve real-world problems.
+        </p>
+      </div>
+
+      <!-- Projects Large Cards Grid Stack -->
+      <div class="space-y-12 group/projects">
+  
+  <div class="bg-white rounded-[32px] p-8 md:p-12 border-2 border-brandViolet/10 hover:border-brandViolet/30 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,0.12)] hover:!opacity-100 group-hover/projects:opacity-40 card-shadow relative">
+    
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center px-3 py-1 bg-brandVioletLight text-brandViolet text-[10px] font-extrabold uppercase rounded">
+          AI-Powered
+        </span>
+        <span class="text-sm text-textMuted font-medium">2025</span>
+      </div>
+      
+      <a href="https://github.com/aishwaryakhandare-git/smartmark" target="_blank" class="px-5 py-2.5 bg-neutral-900 text-white hover:bg-black rounded-full text-xs font-semibold flex items-center gap-2 transition-all">
+        GitHub ↗
+      </a>
+    </div>
+
+    <h3 class="font-grotesk text-3xl font-bold text-textDark mb-4">SmartMark</h3>
+    <p class="text-textMuted text-base leading-relaxed max-w-[1000px] mb-8">
+      A full-stack face recognition-based attendance system that automates and improves traditional attendance processes. Uses real-time facial detection to accurately mark attendance, reducing manual errors and preventing proxy attendance. Includes role-based modules for Admin, Teacher, and Student.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Python</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Flask</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">OpenCV</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Firebase</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">HTML</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">CSS</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">JS</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">FEATURES</span>
+        <p class="text-sm text-textDark">Real-time face detection, automated attendance, secure role-based verification</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">MODULES</span>
+        <p class="text-sm text-textDark">Admin, Teacher, Student — three-tier role-based access system</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">TECH STACK</span>
+        <p class="text-sm text-textDark">Python, Flask, OpenCV, Firebase Realtime DB, HTML/CSS</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">HIGHLIGHTS</span>
+        <p class="text-sm text-textDark">Reduced manual errors, scalable architecture, real-time Firebase sync</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-[32px] p-8 md:p-12 border-2 border-brandViolet/10 hover:border-brandViolet/30 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,0.12)] hover:!opacity-100 group-hover/projects:opacity-40 card-shadow relative">
+    
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center px-3 py-1 bg-brandVioletLight text-brandViolet text-[10px] font-extrabold uppercase rounded">
+          Full-Stack
+        </span>
+        <span class="text-sm text-textMuted font-medium">2026</span>
+      </div>
+      
+      <a href="https://github.com/aishwaryakhandare-git/AirCare-AI" target="_blank" class="px-5 py-2.5 bg-neutral-900 text-white hover:bg-black rounded-full text-xs font-semibold flex items-center gap-2 transition-all">
+        GitHub ↗
+      </a>
+    </div>
+
+    <h3 class="font-grotesk text-3xl font-bold text-textDark mb-4 flex items-center gap-2">AirCare AI 🌿</h3>
+    <p class="text-textMuted text-base leading-relaxed max-w-[1000px] mb-8">
+      A modern full-stack air quality monitoring platform providing real-time AQI insights, environmental analytics, and personalized health recommendations. Users can search any city to instantly fetch live air quality data — temperature, humidity, UV index, and pollutants (PM2.5, PM10, etc.).
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">React.js</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Flask</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Python</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">SQLite</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">AQICN API</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Open-Meteo</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">FEATURES</span>
+        <p class="text-sm text-textDark">Real-time AQI tracking, location comparison matrix, responsive analytic dashboards</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">PAGES</span>
+        <p class="text-sm text-textDark">AQI Dashboard, Health Tips recommendations panel, Saved Favorites Hub</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">DATA SOURCES</span>
+        <p class="text-sm text-textDark">WAQI API Integration, Open-Meteo Meteorological historical data</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">HIGHLIGHTS</span>
+        <p class="text-sm text-textDark">Live AQI insights, interactive environmental analytics, healthy guidelines</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-[32px] p-8 md:p-12 border-2 border-brandViolet/10 hover:border-brandViolet/30 transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_20px_50px_rgba(124,58,237,0.12)] hover:!opacity-100 group-hover/projects:opacity-40 card-shadow relative">
+    
+    <div class="flex items-center justify-between flex-wrap gap-4 mb-6">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center px-3 py-1 bg-brandVioletLight text-brandViolet text-[10px] font-extrabold uppercase rounded">
+          Real-Time
+        </span>
+        <span class="text-sm text-textMuted font-medium">2026</span>
+      </div>
+      
+      <a href="https://github.com/aishwaryakhandare-git/CollabBoard-Real-Time-Whiteboard" target="_blank" class="px-5 py-2.5 bg-neutral-900 text-white hover:bg-black rounded-full text-xs font-semibold flex items-center gap-2 transition-all">
+        GitHub ↗
+      </a>
+    </div>
+
+    <h3 class="font-grotesk text-3xl font-bold text-textDark mb-4">CollabBoard</h3>
+    <p class="text-textMuted text-base leading-relaxed max-w-[1000px] mb-8">
+      A real-time collaborative whiteboard application designed for teams, students, and remote collaboration.
+    </p>
+
+    <div class="flex flex-wrap gap-2 mb-8">
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Flask</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">Socket.IO</span>
+      <span class="px-3 py-1.5 bg-neutral-100 text-[10px] text-brandViolet font-bold rounded uppercase tracking-wider">JavaScript</span>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">FEATURES</span>
+        <p class="text-sm text-textDark">Real-time room drawings, canvas updates</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">TOOLS</span>
+        <p class="text-sm text-textDark">Smart pen, erase tool, vector shapes</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">TECH STACK</span>
+        <p class="text-sm text-textDark">Flask, Socket.IO, Canvas API</p>
+      </div>
+      <div class="bg-neutral-50/50 p-5 rounded-2xl border border-black/[0.03]">
+        <span class="text-[10px] font-bold text-brandViolet tracking-wider block mb-2">HIGHLIGHTS</span>
+        <p class="text-sm text-textDark">Room architecture, responsive web UI</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-24 relative z-20" id="contact">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+      
+      <div class="flex items-center gap-3 mb-10">
+        <span class="text-xs px-2.5 py-1 font-bold font-grotesk bg-brandVioletLight text-brandViolet rounded">03</span>
+        <span class="text-xs uppercase font-bold tracking-widest text-[#6B7280]">CONTACT</span>
+      </div>
+
+      <!-- Main Contact Card Layout -->
+      <div class="bg-white rounded-[32px] p-8 md:p-14 border border-black/[0.04] card-shadow grid grid-cols-1 lg:grid-cols-[1.2fr_.8fr] gap-12 items-center relative overflow-hidden">
+        
+        <!-- Large overlapping symbol art in background -->
+        <span class="absolute -right-10 -bottom-16 text-[320px] leading-none font-bold text-neutral-100 select-none pointer-events-none z-0">
+          @
+        </span>
+
+        <!-- Left Details Side -->
+        <div class="relative z-10 flex flex-col justify-center">
+          <h2 class="font-grotesk text-6xl md:text-7xl font-bold tracking-tighter text-textDark leading-none mb-6">
+            Let's work<br>
+            <span class="text-brandViolet">together.</span>
+          </h2>
+          <p class="text-textMuted text-lg leading-relaxed max-w-[500px] mb-10">
+            I'm open to internships, freelance projects, and full-time opportunities. Ready to bring your vision to life with AI-driven solutions.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <!-- Email Direct Button -->
+            <a href="mailto:aishwaryakhandare005@gmail.com" class="px-8 py-4 bg-brandViolet hover:bg-brandVioletHover text-white font-semibold rounded-full flex items-center gap-3 transition-all shadow-lg hover:shadow-xl">
+              <i class="fas fa-envelope"></i> Send an Email
+            </a>
+            <!-- GitHub Button -->
+            <a href="https://github.com/aishwaryakhandare-git" target="_blank" class="px-8 py-4 bg-transparent border border-black/10 text-textDark font-semibold rounded-full flex items-center gap-3 hover:bg-black/5 transition-all">
+              <i class="fab fa-github"></i> View GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Side Cards Stack Info -->
+        <div class="relative z-10 space-y-4">
+          
+          <div class="bg-[#ECE7DE] p-6 rounded-2xl flex flex-col justify-center">
+            <span class="text-[10px] font-bold text-textMuted uppercase tracking-wider block mb-1">EMAIL</span>
+            <span class="text-base font-bold text-textDark break-all">aishwaryakhandare005@gmail.com</span>
+          </div>
+
+          <div class="bg-[#ECE7DE] p-6 rounded-2xl flex flex-col justify-center">
+            <span class="text-[10px] font-bold text-textMuted uppercase tracking-wider block mb-1">LOCATION</span>
+            <span class="text-base font-bold text-textDark">India · Remote OK</span>
+          </div>
+
+          <div class="bg-[#ECE7DE] p-6 rounded-2xl flex flex-col justify-center">
+            <span class="text-[10px] font-bold text-textMuted uppercase tracking-wider block mb-1">STATUS</span>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span class="text-base font-bold text-textDark">Open to opportunities</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="footer" class="w-full py-12 bg-white border-t border-black/[0.06] relative z-20">
+  <div class="flex flex-col sm:flex-row justify-between items-center gap-6 px-8 max-w-[1400px] mx-auto">
+    <div>
+      <h3 class="text-textDark font-bold text-lg font-grotesk">Aishwarya Khandare</h3>
+    
+    </div>
+
+    <!-- Right Connect Links -->
+    <div class="flex items-center gap-4 flex-wrap">
+      <a href="https://linkedin.com/in/YOUR-LINKEDIN" target="_blank" class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-textMuted hover:text-brandViolet hover:border-brandViolet transition-all">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/aishwaryakhandare-git" target="_blank" class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-textMuted hover:text-brandViolet hover:border-brandViolet transition-all">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:aishwaryakhandare005@gmail.com" class="w-10 h-10 rounded-full border border-black/10 flex items-center justify-center text-textMuted hover:text-brandViolet hover:border-brandViolet transition-all">
+        <i class="far fa-envelope"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP BUTTON -->
+<button onclick="window.scrollTo({top:0, behavior:'smooth'})"
+  class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-white border border-black/10 text-brandViolet font-bold shadow-lg flex items-center justify-center hover:bg-brandVioletLight transition-all hover:scale-110 z-50">
+  ↑
+</button>
+
+<!-- TERMINAL BACKGROUND MOVER SCRIPT -->
+<script>
+const container = document.getElementById("scrolling-code-container");
+
+const codeSnippets = [
+  "docker build -t aishwarya",
+  "const portfolio = { name: 'Aishwarya', role: 'Web Dev' };",
+  "pip install intelligence",
+  "cv2.detectFaces(frame)",
+  "import sys; sys.path.append()",
+  "socket.emit('hello', world)",
+  "console.log('Hello, World!');",
+  "async function deploy() { ... }",
+  "return <Portfolio />",
+  "ready on port 3000",
+  "npx run build",
+  "skills.loaded = true",
+  "projects.compile()",
+  "10110100 11001010 11110000",
+  "$ node portfolio.js",
+  "npm run start"
+];
+
+function generateCodeLines() {
+  const lineCount = 20; // Increased line count to span the whole viewport nicely
+  
+  for (let i = 0; i < lineCount; i++) {
+    const el = document.createElement("div");
+    el.className = "scrolling-code-line";
+    el.innerText = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+    
+    // Distribute columns evenly across the width of the page
+    el.style.left = `${(i * (100 / lineCount)) + (Math.random() * 2)}%`;
+    
+    // Vary the animation speeds for organic movement
+    const speed = 18 + Math.random() * 25;
+    el.style.animationDuration = `${speed}s`;
+    
+    // Stagger the starting times so they do not start as a block
+    const delay = -(Math.random() * speed);
+    el.style.animationDelay = `${delay}s`;
+    
+    container.appendChild(el);
+  }
 }
 
-drawWave();
+generateCodeLines();
 
-</script></body></html>
+// ... existing terminal background script ...
+generateCodeLines();
+
+// EXACT ADDITION: Add this right below your existing code inside the <script> tags
+function copyEmailToClipboard() {
+  const email = "aishwaryakhandare005@gmail.com";
+  
+  navigator.clipboard.writeText(email).then(() => {
+    const badge = document.getElementById("copy-badge");
+    
+    // Slide up and reveal the success badge
+    badge.classList.remove("opacity-0", "translate-y-1");
+    badge.classList.add("opacity-100", "translate-y-0");
+    
+    // Hide it again after 2 seconds
+    setTimeout(() => {
+      badge.classList.remove("opacity-100", "translate-y-0");
+      badge.classList.add("opacity-0", "translate-y-1");
+    }, 2000);
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+}
+</script>
+
+</body>
+</html>
